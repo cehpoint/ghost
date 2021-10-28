@@ -3,7 +3,7 @@
 #            ---------------------------------------------------
 #                              Ghost Framework                                                  
 #            ---------------------------------------------------
-#                Copyright (C) <2019-2020>  <Entynetproject>
+#                Fixed by <Jit Banerjee>
 #
 #        This program is free software: you can redistribute it and/or modify
 #        it under the terms of the GNU General Public License as published by
@@ -50,7 +50,7 @@ sleep 0
 else
 cd ~
 {
-git clone https://github.com/entynetproject/ghost.git
+git clone https://github.com/cehpoint/ghost.git
 } &> /dev/null
 fi
 sleep 0.5
@@ -74,32 +74,6 @@ apt-get update
 apt-get -y install git
 apt-get -y install python3
 apt-get -y install adb
-apk update
-apk add git
-apk add python3
-apk add android-tools
-pacman -Sy
-pacman -S --noconfirm git
-pacman -S --noconfirm python3
-pacman -S --noconfirm android-tools
-zypper refresh
-zypper install -y git
-zypper install -y python3
-zypper install -y android-tools
-yum -y install git
-yum -y install python3
-yum -y install android-tools
-dnf -y install git
-dnf -y install python3
-dnf -y install android-tools
-eopkg update-repo
-eopkg -y install git
-eopkg -y install python3
-eopkg -y install android-tools
-xbps-install -S
-xbps-install -y git
-xbps-install -y python3
-xbps-install -y android-tools
 } &> /dev/null
 
 {
@@ -108,8 +82,6 @@ cp ghost /usr/local/bin
 chmod +x /usr/local/bin/ghost
 cp ghost /bin
 chmod +x /bin/ghost
-cp ghost /data/data/com.termux/files/usr/bin
-chmod +x /data/data/com.termux/files/usr/bin/ghost
 } &> /dev/null
 
 sleep 1
